@@ -1,11 +1,8 @@
-// ./src/app/components/header/Header.tsx
-"use client";
-
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './Header.module.scss';
-import { Search, Menu, X, Truck, Car, Briefcase, Heart } from 'lucide-react';
+import { Search, Menu, X, Truck, Car, Briefcase, FileText, Phone, CreditCard, MapPin, Mail, Clock, Star, UserPlus, Facebook } from 'lucide-react';
 
 const Header: React.FC = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -59,6 +56,80 @@ const Header: React.FC = () => {
     </div>
   );
 
+  const ServiceCenterDropdown = () => (
+    <div className={`${styles.dropdown} ${styles.serviceCenterDropdown}`}>
+      <div className={styles.dropdownContent}>
+        <div className={styles.dropdownColumn}>
+          <FileText size={24} className={styles.icon} />
+          <h3>Explore Policy options</h3>
+          <ul>
+            <li><Link href="/service-center/client-login-old">Client Login (OLD)</Link></li>
+            <li><Link href="/service-center/client-login-new">Client Login (NEW)</Link></li>
+            <li><Link href="/service-center/service" className={styles.seeAll}>See All</Link></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
+
+  const AboutDropdown = () => (
+    <div className={`${styles.dropdown} ${styles.aboutDropdown}`}>
+      <div className={styles.dropdownContent}>
+        <div className={styles.dropdownColumn}>
+          <FileText size={24} className={styles.icon} />
+          <h3>About Our Agency</h3>
+          <ul>
+            <li><Link href="/about/reviews">Read Our Reviews</Link></li>
+            <li><Link href="/about/insurance-companies">Insurance Companies</Link></li>
+            <li><Link href="/about/Independent">We Are Independent</Link></li>
+            <li><Link href="/about/join-team">Join Our Team</Link></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
+
+  const ContactDropdown = () => (
+    <div className={`${styles.dropdown} ${styles.contactDropdown}`}>
+      <div className={styles.dropdownContent}>
+        <div className={styles.contactColumn}>
+          <div className={styles.contactItem}>
+            <MapPin size={20} className={styles.icon} />
+            <div>
+              <h3>Fresno, CA Office</h3>
+              <p>3735 W SHAW AVE.</p>
+              <p>Fresno, CA 93711</p>
+            </div>
+          </div>
+          <div className={styles.contactItem}>
+            <Phone size={20} className={styles.icon} />
+            <a href="tel:559-475-8485">559-475-8485</a>
+          </div>
+          <div className={styles.contactItem}>
+            <Mail size={20} className={styles.icon} />
+            <a href="mailto:ateetagency@gmail.com">ateetagency@gmail.com</a>
+          </div>
+          <div className={styles.contactItem}>
+            <Clock size={20} className={styles.icon} />
+            <p>Office Hours: 9-5, M-F</p>
+          </div>
+          <div className={styles.contactLinks}>
+            <Link href="/review" className={styles.contactLink}>
+              <Star size={20} className={styles.icon} />
+              Review Us
+            </Link>
+            <Link href="/refer" className={styles.contactLink}>
+              <UserPlus size={20} className={styles.icon} />
+              Refer Us
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+
+
+
   const MobileMenu = () => (
     <div className={`${styles.mobileMenu} ${isMenuOpen ? styles.open : ''}`}>
       <button className={styles.closeButton} onClick={toggleMenu}>
@@ -70,13 +141,22 @@ const Header: React.FC = () => {
             <span>Insurance Solutions</span>
             <InsuranceDropdown />
           </li>
-          <li><Link href="/service-center" onClick={toggleMenu}>Service Center</Link></li>
-          <li><Link href="/about" onClick={toggleMenu}>About</Link></li>
-          <li><Link href="/contact" onClick={toggleMenu}>Contact</Link></li>
+          <li>
+            <span>Service Center</span>
+            <ServiceCenterDropdown />
+          </li>
+          <li>
+            <span>About</span>
+            <AboutDropdown />
+          </li>
+          <li>
+            <span>Contact</span>
+            <ContactDropdown />
+          </li>
         </ul>
       </nav>
       <div className={styles.mobileContact}>
-        <span className={styles.phoneNumber}>559-277-5580</span>
+        <span className={styles.phoneNumber}>559-475-8485</span>
         <button className={styles.quoteButton}>Request Quote</button>
       </div>
     </div>
@@ -84,6 +164,21 @@ const Header: React.FC = () => {
 
   return (
     <header className={styles.header}>
+      <div className={styles.topBar}>
+        <div className={styles.topBarContent}>
+          <div className={styles.topBarLeft}>
+            <Phone size={16} />
+            <span>For more inquiries, call us today! 559-475-8485</span>
+          </div>
+          <div className={styles.topBarRight}>
+            <span>License # 6012574</span>
+            <span>Stay connected:</span>
+            <a href="#" aria-label="Facebook">
+              <Facebook size={16} />
+            </a>
+          </div>
+        </div>
+      </div>
       <div className={styles.container}>
         {isMobile ? (
           <>
@@ -92,11 +187,11 @@ const Header: React.FC = () => {
                 <Search size={20} />
               </button>
               <Link href="/" className={styles.logoLink}>
-                <Image 
+                <Image
                   src="/logo.png"
-                  alt="Jagdeep Singh Insurance Agency, Inc." 
-                  width={180} 
-                  height={48} 
+                  alt="Bansal Insurance Agency, Inc."
+                  width={180}
+                  height={48}
                   className={styles.logoImage}
                 />
               </Link>
@@ -110,11 +205,11 @@ const Header: React.FC = () => {
           <>
             <div className={styles.leftSection}>
               <Link href="/" className={styles.logoLink}>
-                <Image 
+                <Image
                   src="/logo.png"
-                  alt="Jagdeep Singh Insurance Agency, Inc." 
-                  width={240} 
-                  height={60} 
+                  alt="Bansal Insurance Agency, Inc."
+                  width={240}
+                  height={60}
                   className={styles.logoImage}
                 />
               </Link>
@@ -124,14 +219,23 @@ const Header: React.FC = () => {
                     <Link href="/insurance-solutions" className={styles.navLink}>Insurance Solutions</Link>
                     <InsuranceDropdown />
                   </li>
-                  <li><Link href="/service-center" className={styles.navLink}>Service Center</Link></li>
-                  <li><Link href="/about" className={styles.navLink}>About</Link></li>
-                  <li><Link href="/contact" className={styles.navLink}>Contact</Link></li>
+                  <li className={styles.hasDropdown}>
+                    <Link href="/service-center" className={styles.navLink}>Service Center</Link>
+                    <ServiceCenterDropdown />
+                  </li>
+                  <li className={styles.hasDropdown}>
+                    <Link href="/about" className={styles.navLink}>About</Link>
+                    <AboutDropdown />
+                  </li>
+                  <li className={styles.hasDropdown}>
+                    <Link href="/contact" className={styles.navLink}>Contact</Link>
+                    <ContactDropdown />
+                  </li>
                 </ul>
               </nav>
             </div>
             <div className={styles.rightSection}>
-              <span className={styles.phoneNumber}>559-277-5580</span>
+              <a href="tel:559-475-8485" className={styles.phoneNumber}>559-475-8485</a>
               <button className={styles.quoteButton}>Request Quote</button>
               <button className={styles.searchButton} aria-label="Search">
                 <Search size={20} />
