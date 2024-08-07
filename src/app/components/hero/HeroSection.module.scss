@@ -27,18 +27,18 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); // Darker overlay
+  background-color: rgba(0, 0, 0, 0.1);
   z-index: 2;
 }
 
 .heroContent {
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+  left: 10%;
+  transform: translate(0, -50%);
+  text-align: left;
   color: white;
-  z-index: 3; // Ensure content is above the overlay
+  z-index: 3;
   width: 80%;
   max-width: 800px;
 }
@@ -60,7 +60,7 @@
 
 .heroButtons {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 1rem;
   margin-top: 2rem;
 }
@@ -70,17 +70,16 @@
   font-size: 1rem;
   border: none;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease;
   border-radius: 4px;
 
   &.primary {
-    background-color: white;
-    color: #333;
+    background-color: transparent;
     border: 2px solid white;
+    color: white;
 
     &:hover {
-      background-color: transparent;
-      color: white;
+      background-color: rgba(255, 255, 255, 0.1);
     }
   }
 
@@ -104,37 +103,22 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   position: relative;
   z-index: 2;
-  height: 300px; // Increased height
-  
+  height: 300px;
 }
-
-
-
-// display: flex;
-// justify-content: space-between;
-// padding: 2rem;
-// background-color: white;
-// margin: -3rem 4rem 0;
-// border-radius: 8px;
-// box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-// position: relative;
-// z-index: 2;
-// height: 300px; // Increased height
-
 
 .infoCard {
   flex: 1;
   text-align: center;
-  padding: 2rem; // Increased padding
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; // Added to vertically center content
+  justify-content: center;
   text-decoration: none;
   color: black;
   transition: all 0.3s ease;
   border-radius: 4px;
-  margin: 0 1rem; // Added margin for spacing between cards
+  margin: 0 1rem;
 
   &:hover {
     transform: translateY(-5px);
@@ -160,39 +144,39 @@
   }
 
   h3 {
-    font-size: 1.4rem; // Increased font size
+    font-size: 1.4rem;
     font-weight: bold;
-    margin: 1rem 0; // Increased margin
+    margin: 1rem 0;
     color: black;
-    transition: color 0.3s ease; // Added transition for smooth color change
+    transition: color 0.3s ease;
   }
 
   &:hover h3 {
-    color: white; // Change h3 color to white on hover
+    color: white;
     text-decoration: none;
   }
 
   p {
-    font-size: 1.1rem; // Increased font size
+    font-size: 1.1rem;
     margin: 0;
-    transition: color 0.3s ease; // Added transition for smooth color change
+    transition: color 0.3s ease;
   }
 
   &:hover p {
-    color: white; // Change paragraph color to white on hover
+    color: white;
     text-decoration: none;
   }
 }
 
 .infoIcon {
-  width: 50px; // Increased icon size
-  height: 50px; // Increased icon size
+  width: 50px;
+  height: 50px;
   color: #8a8989;
   transition: color 0.3s ease;
 }
 
 .infoCard:hover .infoIcon {
-  color: white; // Change icon color to white on hover
+  color: white;
 }
 
 @media (max-width: 1200px) {
@@ -212,7 +196,7 @@
 
   .heroButtons {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .heroButton {
