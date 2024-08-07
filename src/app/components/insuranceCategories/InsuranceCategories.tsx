@@ -26,9 +26,9 @@ const InsuranceCategoriesSection = () => {
     <>
     <section className={styles.insuranceCategoriesSection}>
       <div className={styles.textContent}>
-        <h2 className={styles.title}>Secure Your Truck, Yourself, and Your Business</h2>
+        <h2 className={styles.title}>Secure Your Business and Yourself</h2>
         <p className={styles.description}>
-          Bansal Truck Insurance Agency offers a variety of insurance by industry, personal insurance and business
+          Bansal Insurance Agency offers a variety of insurance by industry, personal insurance and business
           insurance solutions to help you protect what matters most.
         </p>
       </div>

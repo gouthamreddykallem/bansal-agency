@@ -11,7 +11,7 @@ const HeroSection: React.FC = () => {
         <div className={styles.heroImageWrapper}>
           <Image
             src="/truck.jpg"
-            alt="Truck on mountain road"
+            alt="on mountain road"
             layout="fill"
             objectFit="cover"
             objectPosition="center"
@@ -22,7 +22,7 @@ const HeroSection: React.FC = () => {
         <div className={styles.heroContent}>
           <h1 className={styles.heroTitle}>Your One Stop Shop</h1>
           <p className={styles.heroSubtitle}>
-            Bansal Truck Insurance Agency has provided insurance services since 2004.
+            Bansal Insurance Agency has provided insurance services since 2004.
           </p>
           <div className={styles.heroButtons}>
             <button className={`${styles.heroButton} ${styles.primary}`}>Connect With Us</button>

@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
               </ul>
             </div>
             <div className={styles.column}>
-              <h3>About Bansal Truck Insurance Agency</h3>
+              <h3>About Bansal Insurance Agency</h3>
               <ul>
                 <li><Link href="/about-our-agency">About Our Agency</Link></li>
                 <li><Link href="/join-our-team">Join Our Team</Link></li>
@@ -62,9 +62,9 @@ const Footer: React.FC = () => {
           </div>
           <div className={styles.agencyInfo}>
             <h3>Experience the Value of an Independent Agency</h3>
-            <p>At Bansal Truck Insurance Agency, were your one-stop shop for your insurance needs. Our commitment to a long-term mutually beneficial relationship is expressed by the flexible options we offer to our clients on every engagement.</p>
+            <p>At Bansal Insurance Agency, were your one-stop shop for your insurance needs. Our commitment to a long-term mutually beneficial relationship is expressed by the flexible options we offer to our clients on every engagement.</p>
             <p>We are licensed in AR, AZ, CA, CO, DE, FL, GA, IA, IL, IN, KS, KY, MA, MI, MN, MS, NJ, NM, NV, OH, OK, OR, PA, SC, TX, UT, VA, WA, WI, and WY.</p>
-            <p>© 2024 Bansal Insurance Agency, Inc DBA Bansal Truck Insurance Agency | Powered by Forge3 ActiveAgency | All rights reserved | <Link href="/privacy-policy">Privacy Policy</Link></p>
+            <p>© 2024 Bansal Insurance Agency, Inc DBA Bansal Insurance Agency | Powered by Forge3 ActiveAgency | All rights reserved | <Link href="/privacy-policy">Privacy Policy</Link></p>
           </div>
         </div>
       </div>

@@ -22,7 +22,7 @@ const reviews: Review[] = [
   },
   {
     id: 3,
-    text: "Bansal Truck Insurance Agency has been a lifesaver for my business. Their expertise is unmatched.",
+    text: "Bansal Insurance Agency has been a lifesaver for my business. Their expertise is unmatched.",
     author: "Linda S."
   }
 ];
@@ -44,7 +44,7 @@ const ReviewsSection: React.FC = () => {
       <div className={styles.backgroundImage}>
         <Image
           src="/reviews_bg2.jpg"
-          alt="Truck on the road"
+          alt="on the road"
           layout="fill"
           objectFit="cover"
           quality={100}
@@ -62,7 +62,7 @@ const ReviewsSection: React.FC = () => {
         </div>
         <h2 className={styles.title}>Our Clients Rave About Us</h2>
         <p className={styles.subtitle}>
-          Check out our reviews and see why you should switch to Bansal Truck Insurance Agency.
+          Check out our reviews and see why you should switch to Bansal Insurance Agency.
         </p>
         <div className={styles.reviewCarousel}>
           <button className={styles.arrowButton} onClick={prevReview}>
