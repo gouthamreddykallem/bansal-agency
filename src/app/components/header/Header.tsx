@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -36,7 +38,7 @@ const Header: React.FC = () => {
           <Car size={24} className={styles.icon} />
           <h3>Personal Insurance</h3>
           <ul>
-            <li><Link href="/insurance/personal/auto">Auto</Link></li>
+            <li><Link href="/services/insurance/personal/auto">Auto</Link></li>
             <li><Link href="/insurance/personal/home">Home</Link></li>
             <li><Link href="/insurance/personal/life">Individual Life</Link></li>
             <li><Link href="/insurance/personal" className={styles.seeAll}>See All</Link></li>
